@@ -1,0 +1,48 @@
+{
+  "name": "shoetest",
+  "version": "0.1.2",
+  "description": "Powerful string matching insensitive to diacritics, special characters, case and punctuation",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adurrive/shoetest.js"
+  },
+  "keywords": [
+    "match",
+    "find",
+    "search",
+    "filter",
+    "diacritics",
+    "accents",
+    "characters",
+    "text",
+    "string",
+    "results",
+    "shoe",
+    "fun"
+  ],
+  "author": {
+    "name": "Alexandre Durrive",
+    "email": "ad@moseic.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adurrive/shoetest.js/issues"
+  },
+  "homepage": "https://github.com/adurrive/shoetest.js",
+  "dependencies": {
+    "lodash": "^3.1.0",
+    "randexp": "^0.4.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0",
+    "mocha": "^2.1.0"
+  }
+}
