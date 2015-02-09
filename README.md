@@ -30,6 +30,12 @@ Powerful string matching insensitive to diacritics, special characters, case and
   shoetest.match('creme', [a, b, c]);
   // -> [ 'Crème', 'Crème', 'Crème' ]
 
+  shoetest.replace('creme', 'Crème fraîche', [a, b, c]);
+  // -> [ 'heļlṏ, wɵrḻɖ!', 'Algæ Britannicæ', 'The Crème fraîche de la Crème fraîche de la Crème fraîche!' ]
+
+  shoetest.replace('creme', '<b>$1</b>', c);
+  // -> 'The <b>Crème</b> de la <b>Crème</b> de la <b>Crème</b>!'
+
   shoetest.simplify('Ƀuffalỗ buḟḟaḻở Ḅuƒfalo ḅuffȃlỗ bufｆalȏ bǖffaḻồ Ƀⓤffalo buƒfalɵ');
   // -> 'Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo'
 ```

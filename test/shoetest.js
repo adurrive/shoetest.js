@@ -215,4 +215,13 @@ describe('shoetest', function() {
       assert.deepEqual(shoetest.match('the creme de la creme', texts, { begin: '\\b', end: '\\b' }), [ 'The Crème de la Crème' ]);
     });
   });
+  describe('#replace()', function() {
+    var text = 'The Crême de la Crème de la Créme!';
+    it('should replace the provided string with the new string', function() {
+      assert.deepEqual(shoetest.replace('creme', 'Crème fraîche', text), 'The Crème fraîche de la Crème fraîche de la Crème fraîche!');
+    });
+    it('should keep the matched string when using $1', function() {
+      assert.deepEqual(shoetest.replace('creme', '$1 fraîche', text), 'The Crême fraîche de la Crème fraîche de la Créme fraîche!');
+    });
+  });
 });
