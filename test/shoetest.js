@@ -217,11 +217,20 @@ describe('shoetest', function() {
   });
   describe('#replace()', function() {
     var text = 'The Crême de la Crème de la Créme!';
+    var arr = [ 'One time', 'Two times', 3, [ 1, 2, 3 ] ];
     it('should replace the provided string with the new string', function() {
       assert.deepEqual(shoetest.replace('creme', 'Crème fraîche', text), 'The Crème fraîche de la Crème fraîche de la Crème fraîche!');
     });
     it('should keep the matched string when using $1', function() {
       assert.deepEqual(shoetest.replace('creme', '$1 fraîche', text), 'The Crême fraîche de la Crème fraîche de la Créme fraîche!');
+    });
+    it('should work with mix arrays', function() {
+      var mod = shoetest.replace('time', 'troll', arr);
+      assert.deepEqual(mod, [ 'One troll', 'Two trolls', 3, [ 1, 2, 3 ] ]);
+    });
+    it('should not alter the original array', function() {
+      var mod = shoetest.replace('time', 'troll', arr);
+      assert.deepEqual(arr, [ 'One time', 'Two times', 3, [ 1, 2, 3 ] ]);
     });
   });
 });
