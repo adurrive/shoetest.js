@@ -137,3 +137,4 @@ If you wish to update the reference list, only add special characters translated
 * 0.1.2 Initial release
 * 0.1.3 Add replace method
 * 0.1.4 Fix bugs
+* 0.1.5 Fix bugs

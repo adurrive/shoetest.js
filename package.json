@@ -1,6 +1,6 @@
 {
   "name": "shoetest",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Powerful string matching insensitive to diacritics, special characters, case and punctuation",
   "main": "index.js",
   "directories": {
@@ -29,8 +29,7 @@
     "string",
     "results",
     "generator",
-    "fun",
-    "shoe"
+    "fun"
   ],
   "author": {
     "name": "Alexandre Durrive",
