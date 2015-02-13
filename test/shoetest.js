@@ -99,7 +99,7 @@ describe('shoetest', function() {
       assert.equal(shoetest.test('The Creme de la Creme de la Creme!', texts, { charCase: true }), true);
     });
     it('should not match the punctuation by default', function() {
-      assert.equal(shoetest.test('Algae\'"`~-._°#<>%,;*+?!^=:{}()|[]/\\ Britannicae', texts), true);
+      assert.equal(shoetest.test('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸&µ$¥£¢@©® Britannicae', texts), true);
     });
     it('should match the punctuation when punctuation is set to true', function() {
       assert.equal(shoetest.test('the creme, de la creme, de la creme.', texts, { punctuation: true }), false);
@@ -176,7 +176,7 @@ describe('shoetest', function() {
       assert.deepEqual(shoetest.match('The Creme de la Creme de la Creme!', texts, { charCase: true }), [ 'The Crème de la Crème de la Crème!' ]);
     });
     it('should not match the punctuation by default', function() {
-      assert.deepEqual(shoetest.match('Algae\'"`~-._°#<>%,;*+?!^=:{}()|[]/\\ Britannicae', texts), [ 'Algæ Britannicæ' ]);
+      assert.deepEqual(shoetest.match('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸&µ$¥£¢@©® Britannicae', texts), [ 'Algæ Britannicæ' ]);
     });
     it('should match the punctuation when punctuation is set to true', function() {
       assert.deepEqual(shoetest.match('the creme, de la creme, de la creme.', texts, { punctuation: true }), []);

@@ -18,23 +18,26 @@ Powerful string matching insensitive to diacritics, special characters, case and
   var b = 'Algæ Britannicæ';
   var c = 'The Crème de la Crème de la Crème!';
   
+  shoetest.test('hello world', a);
+  // -> true
+
   shoetest.test('hello world', [a, b, c]);
   // -> true
 
-  shoetest.match('Helló (wơrLd)', [a, b, c]);
+  shoetest.match('Helló (wơrLd)', a);
   // -> [ 'heļlṏ, wɵrḻɖ' ]
 
-  shoetest.match('algae britannicae', [a, b, c]);
+  shoetest.match('algae britannicae', b);
   // -> [ 'Algæ Britannicæ' ]
 
   shoetest.match('creme', [a, b, c]);
   // -> [ 'Crème', 'Crème', 'Crème' ]
 
-  shoetest.replace('creme', 'Crème fraîche', [a, b, c]);
-  // -> [ 'heļlṏ, wɵrḻɖ!', 'Algæ Britannicæ', 'The Crème fraîche de la Crème fraîche de la Crème fraîche!' ]
-
   shoetest.replace('creme', '<b>$1</b>', c);
   // -> 'The <b>Crème</b> de la <b>Crème</b> de la <b>Crème</b>!'
+
+  shoetest.replace('creme', 'Crème fraîche', [a, b, c]);
+  // -> [ 'heļlṏ, wɵrḻɖ!', 'Algæ Britannicæ', 'The Crème fraîche de la Crème fraîche de la Crème fraîche!' ]
 
   shoetest.simplify('Ƀuffalỗ buḟḟaḻở Ḅuƒfalo ḅuffȃlỗ bufｆalȏ bǖffaḻồ Ƀⓤffalo buƒfalɵ');
   // -> 'Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo'
@@ -138,3 +141,4 @@ If you wish to update the reference list, only add special characters translated
 * 0.1.3 Add replace method
 * 0.1.4 Fix bugs
 * 0.1.5 Fix bugs
+* 0.1.6 Update reference list
