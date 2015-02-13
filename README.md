@@ -142,3 +142,4 @@ If you wish to update the reference list, only add special characters translated
 * 0.1.4 Fix bugs
 * 0.1.5 Fix bugs
 * 0.1.6 Update reference list
+* 0.1.7 Update reference list
