@@ -30,7 +30,7 @@ describe('shoetest', function() {
       var simplified = shoetest.simplify('Heļlṏ Wɵrḻɖ');
       assert.equal(simplified, 'Hello World');
     });
-    it('should match punctuation', function() {
+    it('should match symbols', function() {
       var simplified = shoetest.simplify('Heļlṏ, Wɵrḻɖ!');
       assert.equal(simplified, 'Hello, World!');
     });
@@ -49,7 +49,7 @@ describe('shoetest', function() {
       var reversed = shoetest.simplify(shoetest.fun('Hello World'));
       assert.equal(reversed, 'Hello World');
     });
-    it('should keep punctuation', function() {
+    it('should keep symbols', function() {
       var reversed = shoetest.simplify(shoetest.fun('Hello, World!'));
       assert.equal(reversed, 'Hello, World!');
     });
@@ -98,14 +98,14 @@ describe('shoetest', function() {
     it('should match the case when charCase is set to true', function() {
       assert.equal(shoetest.test('The Creme de la Creme de la Creme!', texts, { charCase: true }), true);
     });
-    it('should not match the punctuation by default', function() {
-      assert.equal(shoetest.test('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸&µ$¥£¢@©® Britannicae', texts), true);
+    it('should not match the symbols by default', function() {
+      assert.equal(shoetest.test('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸©®&@ Britannicae', texts), true);
     });
-    it('should match the punctuation when punctuation is set to true', function() {
-      assert.equal(shoetest.test('the creme, de la creme, de la creme.', texts, { punctuation: true }), false);
+    it('should match the symbols when symbols is set to true', function() {
+      assert.equal(shoetest.test('the creme, de la creme, de la creme.', texts, { symbols: true }), false);
     });
-    it('should match the punctuation when punctuation is set to true', function() {
-      assert.equal(shoetest.test('the creme de la creme de la creme!', texts, { punctuation: true }), true);
+    it('should match the symbols when symbols is set to true', function() {
+      assert.equal(shoetest.test('the creme de la creme de la creme!', texts, { symbols: true }), true);
     });
     it('should not match the exact whitespaces by default', function() {
       assert.equal(shoetest.test('the creme de la creme de la creme! eat it!', text), true);
@@ -175,14 +175,14 @@ describe('shoetest', function() {
     it('should match the case when charCase is set to true', function() {
       assert.deepEqual(shoetest.match('The Creme de la Creme de la Creme!', texts, { charCase: true }), [ 'The Crème de la Crème de la Crème!' ]);
     });
-    it('should not match the punctuation by default', function() {
-      assert.deepEqual(shoetest.match('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸&µ$¥£¢@©® Britannicae', texts), [ 'Algæ Britannicæ' ]);
+    it('should not match the symbols by default', function() {
+      assert.deepEqual(shoetest.match('Algae\'"-]^}\\[/{)(*+?.|`~_¤°#<>%,;:!ǃ=¡¿«»¼½¾¹²³ªº§¶¦ǀǁǂ¨´·±×÷¬¯¸©®&@ Britannicae', texts), [ 'Algæ Britannicæ' ]);
     });
-    it('should match the punctuation when punctuation is set to true', function() {
-      assert.deepEqual(shoetest.match('the creme, de la creme, de la creme.', texts, { punctuation: true }), []);
+    it('should match the symbols when symbols is set to true', function() {
+      assert.deepEqual(shoetest.match('the creme, de la creme, de la creme.', texts, { symbols: true }), []);
     });
-    it('should match the punctuation when punctuation is set to true', function() {
-      assert.deepEqual(shoetest.match('the creme de la creme de la creme!', texts, { punctuation: true }), [ 'The Crème de la Crème de la Crème!' ]);
+    it('should match the symbols when symbols is set to true', function() {
+      assert.deepEqual(shoetest.match('the creme de la creme de la creme!', texts, { symbols: true }), [ 'The Crème de la Crème de la Crème!' ]);
     });
     it('should not match the exact whitespaces by default', function() {
       assert.deepEqual(shoetest.match('the creme de la creme de la creme! eat it!', text), [ 'The Crème de la Crème de la Crème!\nEat it!' ]);

@@ -1,7 +1,7 @@
 Shoetest.js
 =========
 
-Powerful string matching insensitive to diacritics, special characters, case and punctuation.
+Powerful string matching insensitive to diacritics, special characters, symbols and case.
 
 ## Installation
 
@@ -93,11 +93,11 @@ Default value: `false`
 
 Match the case of the query.
 
-### options.punctuation
+### options.symbols
 Type: `Boolean`
 Default value: `false`
 
-Match the punctuation of the query.
+Match the symbols of the query.
 
 ### options.whitespaces
 Type: `Boolean`
@@ -143,3 +143,4 @@ If you wish to update the reference list, only add special characters translated
 * 0.1.5 Fix bugs
 * 0.1.6 Update reference list
 * 0.1.7 Update reference list
+* 0.2.0 Update API
