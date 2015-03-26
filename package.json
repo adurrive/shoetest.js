@@ -1,6 +1,6 @@
 {
   "name": "shoetest",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Powerful string matching insensitive to diacritics, special characters, symbols and case",
   "main": "index.js",
   "directories": {
@@ -48,11 +48,11 @@
   },
   "homepage": "https://github.com/adurrive/shoetest.js",
   "dependencies": {
-    "lodash": "^3.1.0",
+    "lodash": "^3.6.0",
     "randexp": "^0.4.0"
   },
   "devDependencies": {
-    "jshint": "^2.6.0",
-    "mocha": "^2.1.0"
+    "jshint": "^2.6.3",
+    "mocha": "^2.2.1"
   }
 }

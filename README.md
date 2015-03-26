@@ -109,7 +109,7 @@ Match the exact whitespaces of the query. For instance, by default, will allow a
 Type: `Boolean`
 Default value: `true`
 
-Match the word boundaries of the query. Attention, setting boundaries to false may impact performance.
+Match the word boundaries of the query.
 
 ### options.begin
 Type: `String`
@@ -134,13 +134,3 @@ Add custom regular expression at the end of the query. Escape when necessary, e.
 Pull requests are welcome. If you add functionality, then please add unit tests to cover it.
 
 If you wish to update the reference list, only add special characters translated to 3 or less basic latin characters.
-
-## Release History
-
-* 0.1.2 Initial release
-* 0.1.3 Add replace method
-* 0.1.4 Fix bugs
-* 0.1.5 Fix bugs
-* 0.1.6 Update reference list
-* 0.1.7 Update reference list
-* 0.2.0 Update API
