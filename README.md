@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/shoetest.png?downloads=true)](https://nodei.co/npm/shoetest/)
+
 Shoetest.js
 =========
 
