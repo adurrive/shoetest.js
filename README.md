@@ -32,7 +32,7 @@ Powerful string matching insensitive to diacritics, special characters, symbols 
   shoetest.match('algae britannicae', b);
   // -> [ 'Algæ Britannicæ' ]
 
-  shoetest.match('creme', [a, b, c]);
+  shoetest.match('creme', c);
   // -> [ 'Crème', 'Crème', 'Crème' ]
 
   shoetest.replace('creme', '<b>$1</b>', c);
@@ -43,6 +43,9 @@ Powerful string matching insensitive to diacritics, special characters, symbols 
 
   shoetest.simplify('Ƀuffalỗ buḟḟaḻở Ḅuƒfalo ḅuffȃlỗ bufｆalȏ bǖffaḻồ Ƀⓤffalo buƒfalɵ');
   // -> 'Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo'
+  
+  shoetest.complexify('This is Mars!');
+  // -> 'Thíṣ ịṥ Mârs!'
 ```
 
 ## Advanced usage
@@ -66,13 +69,6 @@ Powerful string matching insensitive to diacritics, special characters, symbols 
   shoetest.test('Alg', b, options);
   // -> false
 
-```
-
-## Bonus
-
-```js
-  shoetest.fun('This is Mars!');
-  // -> 'Thíṣ ịṥ Mârs!'
 ```
 
 ## Options

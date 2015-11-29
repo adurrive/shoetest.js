@@ -8,8 +8,8 @@ describe('shoetest', function() {
   it('should have a simplify method', function() {
     assert.equal(typeof shoetest.simplify, 'function');
   });
-  it('should have a fun method', function() {
-    assert.equal(typeof shoetest.fun, 'function');
+  it('should have a complexify method', function() {
+    assert.equal(typeof shoetest.complexify, 'function');
   });
   it('should have a getRegExp method', function() {
     assert.equal(typeof shoetest.getRegExp, 'function');
@@ -38,19 +38,19 @@ describe('shoetest', function() {
 
   describe('#fun()', function() {
     it('should transform string', function() {
-      var fun = shoetest.fun('hello world');
-      assert.notEqual(fun, 'hello world');
+      var complexified = shoetest.complexify('hello world');
+      assert.notEqual(complexified, 'hello world');
     });
     it('should be reversible with simplify', function() {
-      var reversed = shoetest.simplify(shoetest.fun('hello world'));
+      var reversed = shoetest.simplify(shoetest.complexify('hello world'));
       assert.equal(reversed, 'hello world');
     });
     it('should keep case', function() {
-      var reversed = shoetest.simplify(shoetest.fun('Hello World'));
+      var reversed = shoetest.simplify(shoetest.complexify('Hello World'));
       assert.equal(reversed, 'Hello World');
     });
     it('should keep symbols', function() {
-      var reversed = shoetest.simplify(shoetest.fun('Hello, World!'));
+      var reversed = shoetest.simplify(shoetest.complexify('Hello, World!'));
       assert.equal(reversed, 'Hello, World!');
     });
   });
