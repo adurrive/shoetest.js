@@ -1,6 +1,6 @@
 {
   "name": "shoetest",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Powerful string matching insensitive to diacritics, special characters, symbols and case",
   "main": "index.js",
   "directories": {
