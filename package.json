@@ -1,6 +1,6 @@
 {
   "name": "shoetest",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Powerful string matching insensitive to diacritics, special characters, symbols and case",
   "main": "index.js",
   "directories": {
@@ -53,7 +53,7 @@
     "randexp": "^0.5.3"
   },
   "devDependencies": {
-    "jshint": "^2.13.4",
-    "mocha": "^10.0.0"
+    "jshint": "^2.13.6",
+    "mocha": "^10.2.0"
   }
 }
